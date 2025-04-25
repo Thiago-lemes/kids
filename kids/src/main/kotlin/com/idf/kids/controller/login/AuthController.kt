@@ -1,0 +1,20 @@
+package com.idf.kids.controller.login
+
+import com.idf.kids.dto.request.LoginRequest
+import com.idf.kids.dto.response.LoginResponse
+import com.idf.kids.security.TokenService
+import com.idf.kids.service.login.AuthService
+import org.springframework.security.authentication.AuthenticationManager
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
+import org.springframework.web.bind.annotation.*
+
+@RestController
+@RequestMapping("/auth")
+class AuthController(
+    private val authService: AuthService
+) {
+    @PostMapping("/login")
+    fun login(@RequestBody  request: LoginRequest): LoginResponse {
+       return authService.loginAuth(request)
+    }
+}
