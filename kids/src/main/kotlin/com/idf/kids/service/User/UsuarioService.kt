@@ -3,7 +3,6 @@ package com.idf.kids.service.User
 
 import com.idf.kids.dto.request.CadastroUsuarioRequest
 import com.idf.kids.dto.response.UsuarioResponse
-import com.idf.kids.entity.UsuarioEntity
 import com.idf.kids.repository.UsuarioRepository
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service

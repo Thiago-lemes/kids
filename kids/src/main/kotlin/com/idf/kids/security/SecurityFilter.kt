@@ -25,7 +25,7 @@ class SecurityFilter(
         val token = recuperarToken(request)
         token?.let { it ->
             val login = tokenService.validateToken(it)
-            val user: UserDetails? = userRepository.findByEmail(login.toString())?.orElse(null)
+            val user: UserDetails? = userRepository.findByEmail(login)?.orElse(null)
             user?.let {
                 val authorities = listOf(SimpleGrantedAuthority("ROLE_USER")) // mesmo role pra todo mundo
                 val auth = UsernamePasswordAuthenticationToken(it, null, authorities)
