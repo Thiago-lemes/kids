@@ -1,6 +1,6 @@
 package com.idf.kids.repository
 
-import com.idf.kids.entity.UsuarioEntity
+import com.idf.kids.entity.usuario.UsuarioEntity
 import org.springframework.data.jpa.repository.JpaRepository
 import java.util.*
 

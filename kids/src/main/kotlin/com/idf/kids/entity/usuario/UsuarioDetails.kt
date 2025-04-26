@@ -1,29 +1,7 @@
-package com.idf.kids.security
+package com.idf.kids.entity.usuario
 
-import com.idf.kids.entity.UsuarioEntity
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
-
-//class UsuarioDetails(
-//    private val usuario: UsuarioEntity
-//) : UserDetails {
-//
-//    override fun getUsername() = usuario.email
-//
-//    override fun getPassword() = usuario.password
-//
-//    override fun getAuthorities(): Collection<GrantedAuthority> = emptyList()
-//
-//    override fun isAccountNonExpired() = true
-//
-//    override fun isAccountNonLocked() = true
-//
-//    override fun isCredentialsNonExpired() = true
-//
-//    override fun isEnabled() = true
-//
-//    fun getUsuario() = usuario
-//}
 
 class UsuarioDetails(private val usuario: UsuarioEntity) : UserDetails {
 

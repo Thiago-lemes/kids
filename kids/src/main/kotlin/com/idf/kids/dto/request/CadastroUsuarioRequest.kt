@@ -1,7 +1,7 @@
 package com.idf.kids.dto.request
 
-import com.idf.kids.entity.TipoUsuario
-import com.idf.kids.entity.UsuarioEntity
+import com.idf.kids.entity.usuario.TipoUsuario
+import com.idf.kids.entity.usuario.UsuarioEntity
 import org.springframework.security.crypto.password.PasswordEncoder
 
 data class CadastroUsuarioRequest(

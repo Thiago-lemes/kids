@@ -47,6 +47,8 @@ class SecurityConfigurations(
             .authorizeHttpRequests {
                 it.requestMatchers("/auth/**").permitAll()
                 it.requestMatchers("/usuario/**").permitAll()
+                it.requestMatchers("/auth/me").authenticated()
+                it.requestMatchers("/aluno/register").authenticated()
                 it.anyRequest().authenticated()
             }
             .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter::class.java)

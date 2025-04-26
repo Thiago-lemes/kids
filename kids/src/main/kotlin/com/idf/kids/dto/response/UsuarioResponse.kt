@@ -1,6 +1,6 @@
 package com.idf.kids.dto.response
 
-import com.idf.kids.entity.UsuarioEntity
+import com.idf.kids.entity.usuario.UsuarioEntity
 
 data class UsuarioResponse(
     val id: Long,

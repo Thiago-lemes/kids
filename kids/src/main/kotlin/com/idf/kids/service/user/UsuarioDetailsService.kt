@@ -1,11 +1,10 @@
-package com.idf.kids.service.User
+package com.idf.kids.service.user
 
 import com.idf.kids.repository.UsuarioRepository
-import com.idf.kids.security.UsuarioDetails
+import com.idf.kids.entity.usuario.UsuarioDetails
 import org.springframework.security.core.userdetails.UserDetailsService
 import org.springframework.security.core.userdetails.UsernameNotFoundException
 import org.springframework.stereotype.Service
-
 
 @Service
 class UsuarioDetailsService(
