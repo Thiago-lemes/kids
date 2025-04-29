@@ -10,7 +10,7 @@ data class CadastroAlunoRequest(
     val obeservacao: String,
 ){
     fun toEntity(responsavel: UsuarioEntity) = AlunoEntity(
-        nome = nome,
+        nome = nome.uppercase(Locale.getDefault()),
         dataNascimento = dataNascimento,
         responsavel = responsavel,
         obeservacao = obeservacao,
