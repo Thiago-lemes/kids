@@ -3,7 +3,7 @@ package com.idf.kids.service.login
 import com.idf.kids.dto.request.LoginRequest
 import com.idf.kids.dto.response.LoginResponse
 import com.idf.kids.security.TokenService
-import com.idf.kids.security.UsuarioDetails
+import com.idf.kids.entity.usuario.UsuarioDetails
 import org.springframework.security.authentication.AuthenticationManager
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.stereotype.Service

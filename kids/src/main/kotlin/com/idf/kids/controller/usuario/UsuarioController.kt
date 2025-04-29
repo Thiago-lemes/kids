@@ -3,7 +3,7 @@ package com.idf.kids.controller.usuario
 
 import com.idf.kids.dto.request.CadastroUsuarioRequest
 import com.idf.kids.dto.response.UsuarioResponse
-import com.idf.kids.service.User.UsuarioService
+import com.idf.kids.service.user.UsuarioService
 import org.springframework.web.bind.annotation.*
 
 @RestController

@@ -1,4 +1,4 @@
-package com.idf.kids.service.User
+package com.idf.kids.service.user
 
 
 import com.idf.kids.dto.request.CadastroUsuarioRequest

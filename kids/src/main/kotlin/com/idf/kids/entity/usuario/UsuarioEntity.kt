@@ -1,4 +1,4 @@
-package com.idf.kids.entity
+package com.idf.kids.entity.usuario
 
 import jakarta.persistence.*
 import org.springframework.security.core.GrantedAuthority
@@ -23,7 +23,7 @@ import org.springframework.security.core.userdetails.UserDetails
 
     override fun getUsername() = email
 
-    override fun getPassword() = senha // <--- implementa aqui
+    override fun getPassword() = senha
 
     override fun getAuthorities() = mutableListOf<GrantedAuthority>()
 
