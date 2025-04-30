@@ -2,8 +2,6 @@ import com.idf.kids.dto.response.UsuarioSimplesResponse
 import com.idf.kids.entity.aula.AulaEntity
 import com.idf.kids.entity.aula.CultosEnum
 import com.idf.kids.entity.aula.SalasEnum
-import java.time.format.DateTimeFormatter
-import java.util.*
 
 data class AulaResponse(
     val id: Long,

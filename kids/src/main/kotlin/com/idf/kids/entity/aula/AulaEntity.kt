@@ -2,7 +2,7 @@ package com.idf.kids.entity.aula
 
 import com.idf.kids.entity.usuario.UsuarioEntity
 import jakarta.persistence.*
-import java.time.LocalDateTime
+import java.time.LocalDate
 
 @Entity
 @Table(name = "aula")
@@ -19,7 +19,7 @@ data class AulaEntity(
     val capacidade: Int = 0,
 
     @Column(name = "data_aula")
-    val dataAula: LocalDateTime,
+    val dataAula: LocalDate,
 
     val ativa: Boolean = false,
 
