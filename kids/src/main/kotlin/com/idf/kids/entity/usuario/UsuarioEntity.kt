@@ -36,7 +36,3 @@ import org.springframework.security.core.userdetails.UserDetails
     override fun isEnabled() = true
 }
 
-enum class TipoUsuario {
-    PROFESSOR,
-    RESPONSAVEL
-}
