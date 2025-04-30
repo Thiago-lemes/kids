@@ -49,6 +49,7 @@ class SecurityConfigurations(
                 it.requestMatchers("/usuario/**").permitAll()
                 it.requestMatchers("/auth/me").authenticated()
                 it.requestMatchers("/aluno/register").authenticated()
+                it.requestMatchers("/aula/register").authenticated()
                 it.anyRequest().authenticated()
             }
             .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter::class.java)
