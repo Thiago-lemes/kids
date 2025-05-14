@@ -50,6 +50,8 @@ class SecurityConfigurations(
                 it.requestMatchers("/auth/me").authenticated()
                 it.requestMatchers("/aluno/register").authenticated()
                 it.requestMatchers("/aula/register").authenticated()
+                it.requestMatchers("/aula/create").authenticated()
+
                 it.anyRequest().authenticated()
             }
             .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter::class.java)

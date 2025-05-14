@@ -7,5 +7,4 @@ interface AlunoRepository : JpaRepository<AlunoEntity?, Long?> {
     fun existsByResponsavelIdAndNome(responsavelId: Long, nome: String): Boolean
 
     fun findByResponsavelId(responsavelId: Long): List<AlunoEntity>
-
 }

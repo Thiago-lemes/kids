@@ -16,7 +16,7 @@ data class AulaEntity(
     @Enumerated(EnumType.STRING)
     val sala: SalasEnum,
 
-    val capacidade: Int = 0,
+    var capacidade: Int = 0,
 
     @Column(name = "data_aula")
     val dataAula: LocalDate,
