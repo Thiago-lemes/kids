@@ -2,7 +2,7 @@ package com.idf.kids.service.aula
 
 import AulaResponse
 import CadastroAulaRequest
-import com.idf.kids.Component.Utils
+import com.idf.kids.ultil.Utils
 import com.idf.kids.dto.request.registerAulaRequest
 import com.idf.kids.dto.response.AlunoRegistradoAulaResponse
 import com.idf.kids.entity.aula.AulaEntity
@@ -62,12 +62,10 @@ class AulaService(
         if (registrosAulaRepository.existsByAulaAndAluno(aula!!, aluno!!)) {
             throw IllegalStateException("O aluno já está registrado nessa aula.")
         }
-            verificaCapacidadeAula(aula)
+        verificaCapacidadeAula(aula)
 
         val registro = RegistrosAulaEntity(
-            aula = aula,
-            aluno = aluno,
-            usuario = usuario
+            aula = aula, aluno = aluno, usuario = usuario
         )
 
         val registroSalvo = registrosAulaRepository.save(registro)
@@ -75,7 +73,7 @@ class AulaService(
         return AlunoRegistradoAulaResponse.fromEntity(registroSalvo)
     }
 
-   private fun verificaSeEPrimeiraSemana(data: LocalDate): Boolean {
+    private fun verificaSeEPrimeiraSemana(data: LocalDate): Boolean {
         val primeiroDiaMes = data.withDayOfMonth(1)
         val primeiraQuinta = primeiroDiaMes.with(TemporalAdjusters.nextOrSame(DayOfWeek.THURSDAY))
         val primeiroDomingo = primeiroDiaMes.with(TemporalAdjusters.nextOrSame(DayOfWeek.SUNDAY))

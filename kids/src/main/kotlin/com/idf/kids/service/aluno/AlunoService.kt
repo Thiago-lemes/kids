@@ -1,6 +1,6 @@
 package com.idf.kids.service.aluno
 
-import com.idf.kids.Component.Utils
+import com.idf.kids.ultil.Utils
 import com.idf.kids.dto.request.CadastroAlunoRequest
 import com.idf.kids.dto.response.AlunoCadastradoResponse
 import com.idf.kids.dto.response.AlunoResponse
@@ -15,7 +15,7 @@ class AlunoService(
     private var ultis: Utils
 ) {
     fun cadastrar(request: CadastroAlunoRequest): AlunoCadastradoResponse {
-        val responsavel = ultis.usuarioLogado();
+        val responsavel = ultis.usuarioLogado()
         if (repository.existsByResponsavelIdAndNome(responsavel.id, request.nome)) {
             throw BusinessException(
                 message = "Aluno '${request.nome}' já cadastrado",
@@ -33,5 +33,4 @@ class AlunoService(
 
         return alunos.map { AlunoResponse.fromEntity(it) }
     }
-
 }
